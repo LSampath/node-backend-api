@@ -1,13 +1,12 @@
 const express = require('express');
+const weatherRoute = require('./route/weather');
+
 const app = express();
 
-app.get('/', (req,res) => {
-    res.send('Hi bitch...');
+app.use('/weather', weatherRoute);
+
+app.get('/', (req, res) => {
+    res.send('Welcome to TravelMap API..');
 });
 
-const server = app.listen(3000, () => console.log('server ready..'));
-
-process.on('SIGTERM', () => {
-    // call process.kill(process.pid, 'SIGTERM') to trigger this event and close the application
-    server.close(() => console.log('Service terminated..'));
-})
+app.listen(3000, () => console.log('server ready..'));

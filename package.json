@@ -1,5 +1,15 @@
 {
+  "name": "travel-map",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start-windows": "cross-env NODE_ENV=dev node app.js",
+    "start": "NODE_ENV=prod node app.js"
+  },
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
