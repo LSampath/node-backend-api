@@ -1,10 +1,10 @@
 const express = require('express');
-const weather_repo = require('../repository/weather')
+const map_repo = require('../repository/map')
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('weather result API is under development..');
+    res.send('Map API is under development..');
 });
 
 module.exports = router;
