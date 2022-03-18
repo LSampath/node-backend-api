@@ -1,19 +1,19 @@
 const DEV = 'dev';
 const PROD = 'prod';
 
-let config_data;
+let configData;
 
 const environment = process.env.NODE_ENV || DEV;
 
 switch (environment) {
     case PROD:
-        config_data = require('./config_prod');
+        configData = require('./config.prod');
         break;
     case DEV:
     default:
-        config_data = require('./config_dev');
+        configData = require('./config.dev');
 }
 
-module.exports = config_data;
+module.exports = configData;
 
 
