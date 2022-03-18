@@ -1,5 +1,5 @@
 const express = require('express');
-const map_repo = require('../repository/map')
+const mapRepository = require('../repository/map.repository')
 
 const router = express.Router();
 
